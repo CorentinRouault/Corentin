@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Interactive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Go+Bold&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Go Bold', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #003366; /* bleu foncé */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #002244; /* un bleu encore plus foncé au survol */
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            display: none;
+        }
+        #image {
+            width: 150px; /* ajuster la taille de l'image */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%; /* pour arrondir l'image */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Image intégrée -->
+    <img src="https://media.licdn.com/dms/image/v2/D4E03AQH_QLNeLXvSEQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1668493340027?e=1736380800&v=beta&t=W9wd6t0kmlmcTJYAFX9zqzyz-GMGNV7IF0I2Qtfhskc" alt="Photo de profil" id="image">
+
+    <h1>Coucou Claude, j'ai un message pour toi !</h1>
+    <button onclick="afficherMessage()">Clique ici</button>
+    <p id="message">N'oublie jamais que tu es le meilleur</p>
+
+    <script>
+        function afficherMessage() {
+            var message = document.getElementById("message");
+            message.style.display = "block";
+        }
+    </script>
+    
+</body>
+</html>
